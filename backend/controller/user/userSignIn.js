@@ -6,6 +6,7 @@ const createToken = require('../../helpers/createToken');
 async function userSignInController(req, res){
     try{
         const { email ,password } = req?.body;
+        console.log("email and password in backend", email,password);
 
         if(!email || !password){
             return res.json({
