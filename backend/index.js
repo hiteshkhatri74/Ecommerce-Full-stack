@@ -20,6 +20,8 @@ app.use("/api",router);
 
 const PORT = 8080 || process.env.PORT;
 
+console.log("connecting to DB ...");
+
 connectDB().then(() => {
     app.listen(PORT,() => {
         console.log("connect to DB");
