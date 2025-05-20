@@ -26,3 +26,6 @@ connectDB().then(() => {
         console.log("Server is running " + PORT);
     })
 })
+.catch((err) => {
+    console.error("❌ Failed to connect to DB:", err.message);
+  });
