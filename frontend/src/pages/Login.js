@@ -31,7 +31,6 @@ const Login = () => {
 
     const handleSubmit = async(e) =>{
         e.preventDefault()
-        console.log("handle Submit event is fired")
 
         const dataResponse = await fetch(SummaryApi.signIn.url,{
             method : SummaryApi.signIn.method,
@@ -43,7 +42,6 @@ const Login = () => {
         })
 
         const dataApi = await dataResponse.json()
-        console.log("dataApi" ,dataApi);
 
         if(dataApi.success){
             toast.success(dataApi.message)

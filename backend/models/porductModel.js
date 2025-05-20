@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-// const { collection } = require('./userModel');
 
 const productSchema = mongoose.Schema({
     productName : String,
@@ -11,7 +10,6 @@ const productSchema = mongoose.Schema({
     sellingPrice : Number
 },{
     timestamps : true,
-    // collection : 'products'
 });
 
 
