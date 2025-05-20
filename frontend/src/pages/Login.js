@@ -31,6 +31,7 @@ const Login = () => {
 
     const handleSubmit = async(e) =>{
         e.preventDefault()
+        console.log("handle Submit event is fired")
 
         const dataResponse = await fetch(SummaryApi.signIn.url,{
             method : SummaryApi.signIn.method,
@@ -113,7 +114,7 @@ const Login = () => {
                             </Link>
                         </div>
 
-                        <button className='bg-red-600 hover:bg-red-700 text-white px-6 py-2 w-full rounded-full mx-auto block mt-6'>Login</button>
+                        <button type='submit' className='bg-red-600 hover:bg-red-700 text-white px-6 py-2 w-full rounded-full mx-auto block mt-6'>Login</button>
                     </form>
 
                     <p className='my-5'>Don't have account ? <Link to={"/sign-up"} className=' text-red-600 hover:text-red-700 hover:underline'>Sign up</Link></p>
